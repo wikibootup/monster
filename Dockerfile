@@ -137,4 +137,4 @@ COPY Pipfile.lock .
 RUN pipenv install --system
 
 EXPOSE 80
-CMD [ "python3", "-m" , "http.server"]
+CMD [ "/bin/sh"]
