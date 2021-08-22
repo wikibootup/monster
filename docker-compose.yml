@@ -1,9 +1,12 @@
-version: "3.9"  # optional since v1.27.0
+version: "3.9"
+
 services:
-  monster:
+  eternals:
     image: monster:latest
+    build: .
+    ports:
+      - "3000:3000"
+    restart: always
     volumes:
       - .:/app
-    ports:
-      - "8080:80"
-    command: [ "/bin/bash", ".docker/run.sh" ]
+    container_name: monster
